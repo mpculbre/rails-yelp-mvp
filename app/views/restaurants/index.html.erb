@@ -1,0 +1,15 @@
+
+<div class="container">
+<h1 class="text-center mt-4 mb-4">Restaurants:</h1>
+
+  <div class="row">
+    <% @restaurants.each do |r| %>
+    <div class ="col-xs-12 col-sm-6">
+      <div class="card text-center mt-3 mb-3 p-3">
+        <h4><%= link_to r.name, restaurant_path(r), class: "link" %></h4>
+        <p><%= r.address  %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
